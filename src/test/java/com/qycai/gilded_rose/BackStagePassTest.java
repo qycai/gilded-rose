@@ -65,4 +65,16 @@ public class BackStagePassTest {
         assertThat(newQuality).isEqualTo(oldQuality + 3);
         assertThat(newSellIn).isEqualTo(oldSellIn - 1);
     }
+
+    @Test
+    void should_quality_be_50_and_sellIn_decrease_by1_when_update_given_sellIn_between_1_5_and_quality_between_48_50() {
+        double oldQuality = 48;
+        int oldSellIn = 3;
+        Goods goods = new Goods("backStagePass", oldQuality, oldSellIn);
+        goods.updateByDay();
+        double newQuality = goods.getQuality();
+        int newSellIn = goods.getSellIn();
+        assertThat(newQuality).isEqualTo(50);
+        assertThat(newSellIn).isEqualTo(oldSellIn - 1);
+    }
 }
