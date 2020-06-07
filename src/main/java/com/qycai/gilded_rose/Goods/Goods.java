@@ -23,16 +23,20 @@ public class Goods {
             if (sellIn <= 0) {
                 quality = 0;
             }
-            sellIn = sellIn - 1;
+            decreaseSellInBy1();
 
         } else {
             decreaseQualityBy1();
-            sellIn = sellIn - 1;
+            decreaseSellInBy1();
             if (sellIn < 0) {
                 decreaseQualityBy1();
             }
         }
 
+    }
+
+    private void decreaseSellInBy1() {
+        sellIn = sellIn - 1;
     }
 
     private void increaseQualityBy1() {
