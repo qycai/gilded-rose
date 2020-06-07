@@ -1,6 +1,6 @@
 package com.qycai.gilded_rose;
 
-public class Goods {
+public abstract class Goods {
     private String name;
     protected double quality;
     protected int sellIn;
@@ -11,8 +11,7 @@ public class Goods {
         this.sellIn = sellIn;
     }
 
-    public void updateByDay() {
-    }
+    abstract void updateByDay();
 
     protected void decreaseSellInBy1() {
         sellIn = sellIn - 1;
