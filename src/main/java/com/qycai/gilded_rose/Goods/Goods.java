@@ -17,6 +17,9 @@ public class Goods {
             if (sellIn < 11) {
                 increaseQualityBy1();
             }
+            if (sellIn < 6) {
+                increaseQualityBy1();
+            }
             sellIn = sellIn - 1;
 
         } else {
