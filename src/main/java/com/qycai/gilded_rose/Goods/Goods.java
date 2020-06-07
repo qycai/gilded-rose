@@ -20,6 +20,9 @@ public class Goods {
             if (sellIn < 6) {
                 increaseQualityBy1();
             }
+            if (sellIn <= 0) {
+                quality = 0;
+            }
             sellIn = sellIn - 1;
 
         } else {
