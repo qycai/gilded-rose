@@ -16,6 +16,9 @@ public class Goods {
             quality = quality - 1;
         }
         sellIn = sellIn - 1;
+        if (sellIn < 0) {
+            quality = quality - 1;
+        }
     }
 
     public double getQuality() {
