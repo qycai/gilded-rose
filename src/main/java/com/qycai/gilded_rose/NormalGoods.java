@@ -1,6 +1,4 @@
-package com.qycai.gilded_rose.NormalGoods;
-
-import com.qycai.gilded_rose.Goods.Goods;
+package com.qycai.gilded_rose;
 
 public class NormalGoods extends Goods {
     public NormalGoods(double quality, int sellIn) {

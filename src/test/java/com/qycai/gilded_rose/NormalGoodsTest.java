@@ -1,7 +1,5 @@
 package com.qycai.gilded_rose;
 
-import com.qycai.gilded_rose.Goods.Goods;
-import com.qycai.gilded_rose.NormalGoods.NormalGoods;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;

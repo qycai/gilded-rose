@@ -1,8 +1,8 @@
-package com.qycai.gilded_rose.Goods;
+package com.qycai.gilded_rose;
 
 public class Goods {
     private String name;
-    private double quality;
+    protected double quality;
     protected int sellIn;
 
     public Goods(String name, double quality, int sellIn) {
@@ -12,26 +12,13 @@ public class Goods {
     }
 
     public void updateByDay() {
-        if (name.equals("backStagePass")) {
-            increaseQualityBy1();
-            if (sellIn < 11) {
-                increaseQualityBy1();
-            }
-            if (sellIn < 6) {
-                increaseQualityBy1();
-            }
-            if (sellIn <= 0) {
-                quality = 0;
-            }
-            decreaseSellInBy1();
-        }
     }
 
     protected void decreaseSellInBy1() {
         sellIn = sellIn - 1;
     }
 
-    private void increaseQualityBy1() {
+    protected void increaseQualityBy1() {
         if (quality < 50) {
             quality = quality + 1;
         }
