@@ -3,7 +3,7 @@ package com.qycai.gilded_rose.Goods;
 public class Goods {
     private String name;
     private double quality;
-    private int sellIn;
+    protected int sellIn;
 
     public Goods(String name, double quality, int sellIn) {
         this.name = name;
@@ -24,18 +24,10 @@ public class Goods {
                 quality = 0;
             }
             decreaseSellInBy1();
-
-        } else {
-            decreaseQualityBy1();
-            decreaseSellInBy1();
-            if (sellIn < 0) {
-                decreaseQualityBy1();
-            }
         }
-
     }
 
-    private void decreaseSellInBy1() {
+    protected void decreaseSellInBy1() {
         sellIn = sellIn - 1;
     }
 
@@ -45,7 +37,7 @@ public class Goods {
         }
     }
 
-    private void decreaseQualityBy1() {
+    protected void decreaseQualityBy1() {
         if (quality > 0) {
             quality = quality - 1;
         }
