@@ -17,7 +17,9 @@ public class Goods {
         }
         sellIn = sellIn - 1;
         if (sellIn < 0) {
-            quality = quality - 1;
+            if (quality > 0) {
+                quality = quality - 1;
+            }
         }
     }
 
