@@ -13,7 +13,9 @@ public class Goods {
 
     public void updateByDay() {
         if (name.equals("backStagePass")) {
-            quality = quality + 1;
+            if (quality < 50) {
+                quality = quality + 1;
+            }
             sellIn = sellIn - 1;
         } else {
             decreaseQualityBy1();
