@@ -13,13 +13,9 @@ public class Goods {
 
     public void updateByDay() {
         if (name.equals("backStagePass")) {
-            if (quality < 50) {
-                quality = quality + 1;
-            }
+            increaseQualityBy1();
             if (sellIn < 11) {
-                if (quality < 50) {
-                    quality = quality + 1;
-                }
+                increaseQualityBy1();
             }
             sellIn = sellIn - 1;
 
@@ -31,6 +27,12 @@ public class Goods {
             }
         }
 
+    }
+
+    private void increaseQualityBy1() {
+        if (quality < 50) {
+            quality = quality + 1;
+        }
     }
 
     private void decreaseQualityBy1() {
