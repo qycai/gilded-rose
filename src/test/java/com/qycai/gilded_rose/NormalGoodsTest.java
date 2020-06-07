@@ -18,4 +18,16 @@ public class NormalGoodsTest {
         assertThat(newQuality).isEqualTo(oldQuality - 1);
         assertThat(newSellIn).isEqualTo(oldSellIn - 1);
     }
+
+    @Test
+    void should_quality_be_0_and_sellIn_decrease_by1_when_update_given_in_sell_and_quality_is_0() {
+        double oldQuality = 0;
+        int oldSellIn = 10;
+        Goods goods = new Goods("normalGoods", oldQuality, oldSellIn);
+        goods.updateByDay();
+        double newQuality = goods.getQuality();
+        int newSellIn = goods.getSellIn();
+        assertThat(newQuality).isEqualTo(0);
+        assertThat(newSellIn).isEqualTo(oldSellIn - 1);
+    }
 }
